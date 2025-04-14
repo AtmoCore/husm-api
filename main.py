@@ -1,41 +1,15 @@
-import runpod
-import time
+from fastapi import FastAPI
+import uvicorn
 import numpy as np
-import husm_wrapper  # .pyd already included and imported
+from husm_wrapper import husm_reduce
 
-# ---- HUSM benchmark core logic ----
-def run_husm(input_array):
-    start = time.time()
-    result = husm_wrapper.husm(input_array)
-    duration = time.time() - start
-    return float(result[0]), duration
+app = FastAPI()
 
-# ---- RunPod handler ----
-def handler(job):
-    """
-    job['input'] should look like:
-    {
-        "prompt": "1000000"   # This is the number of elements in the array
-    }
-    """
-    try:
-        count = int(job["input"]["prompt"])
-        array = np.random.randn(count).astype(np.float32)
+@app.post("/husm-reduce")
+async def husm_api(data: dict):
+    arrays = data.get("streams", [])
+    result = husm_reduce(arrays)
+    return {"results": result, "total": sum(result)}
 
-        husm_result, husm_time = run_husm(array)
-        np_result = float(np.sum(array))
-        diff = abs(husm_result - np_result)
-
-        return {
-            "✅ HUSM result": husm_result,
-            "🧠 NumPy result": np_result,
-            "📐 Difference": diff,
-            "⚡ HUSM runtime (sec)": round(husm_time, 6),
-            "🧪 Array size": count
-        }
-
-    except Exception as e:
-        return {"error": str(e)}
-
-# ---- Start the endpoint ----
-runpod.serverless.start({"handler": handler})
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8000)
