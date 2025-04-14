@@ -77,3 +77,4 @@ This project is public. The method is proven.
 If you know what this unlocks, you know where to go next.
 
 GitHub: https://github.com/AtmoCore/husm-api
+MIT © Selymesi Otto
