@@ -75,29 +75,6 @@ No host-side loop.
 No stream-to-block mapping.
 Just one call.
 
-📂 Project structure
-husm-api/
-
-├── LICENSE
-
-├── README.md
-
-├── bench.cu
-
-├── build.bat
-
-├── data/
-│   ├── length.txt
-
-│   ├── offset.txt
-
-│   └── value.txt
-
-├── husm.cu
-
-├── husm.cuh
-
-└── test.cu
 
 📫 Contact / Collaboration
 If you are working in:
