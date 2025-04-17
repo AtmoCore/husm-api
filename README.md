@@ -59,9 +59,8 @@ HUSM is not an optimization.
 It’s a fundamentally different model of computation.
 
 📎 Example use case
-cpp
-Másolás
-Szerkesztés
+cpp:
+
 husm::multi_stream_sum<<<blocks, threads>>>(
     device_data_ptr,
     device_output_ptr,
@@ -69,6 +68,8 @@ husm::multi_stream_sum<<<blocks, threads>>>(
     stream_lengths_ptr,
     num_streams
 );
+
+
 No atomic operations.
 No host-side loop.
 No stream-to-block mapping.
@@ -99,6 +100,5 @@ Physics-informed computing
 Dataflow architectures
 
 Get in touch — this may be relevant to your domain.
-
 Email: selymesiotto100@gmail.com
 Location: Stuttgart, Germany
