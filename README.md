@@ -39,12 +39,17 @@ allowing seamless reduction over thousands of irregular streams
 📊 Benchmark (vs. CUB)
 
 Input Type	Elements	CUB Time (ms)	HUSM Time (ms)	Speedup
+
 Irregular (100k streams)	~10⁷	1837.25	926.48	+1.98x
+
 Regular (1B elements)	10⁹	58.3	31.4	+1.85x
+
 Small uniform	10⁶	0.093	0.082	≈1.13x
+
 ✅ Benchmarks run on RTX 1070, CUDA 12.8
-✅ Full reproducible source in /benchmark/
+
 ✅ Works natively with float32, float64, int, long
+
 
 💡 What does HUSM mean in practice?
 It means you can:
