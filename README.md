@@ -78,17 +78,26 @@ Just one call.
 📂 Project structure
 husm-api/
 
-├── src/              # CUDA kernel (HUSM.cu)
+├── LICENSE
 
-├── include/          # HUSM headers
+├── README.md
 
-├── benchmark/        # Benchmark tools and timing results
+├── bench.cu
 
-├── tests/            # Accuracy and regression tests
+├── build.bat
 
-├── examples/         # Real-world input demonstration
+├── data/
+│   ├── length.txt
 
-└── README.md         # You're here
+│   ├── offset.txt
+
+│   └── value.txt
+
+├── husm.cu
+
+├── husm.cuh
+
+└── test.cu
 
 📫 Contact / Collaboration
 If you are working in:
