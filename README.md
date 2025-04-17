@@ -76,27 +76,27 @@ No stream-to-block mapping.
 Just one call.
 
 📂 Project structure
-makefile
-Másolás
-Szerkesztés
 husm-api/
+
 ├── src/              # CUDA kernel (HUSM.cu)
+
 ├── include/          # HUSM headers
+
 ├── benchmark/        # Benchmark tools and timing results
+
 ├── tests/            # Accuracy and regression tests
+
 ├── examples/         # Real-world input demonstration
+
 └── README.md         # You're here
+
 📫 Contact / Collaboration
 If you are working in:
 
 GPU architecture
-
 Parallel computation
-
 Compilers / kernels
-
 Physics-informed computing
-
 Dataflow architectures
 
 Get in touch — this may be relevant to your domain.
