@@ -23,6 +23,7 @@ Instead, it treats the input space as a unified, quantized field,
 allowing seamless reduction over thousands of irregular streams
 — all in one kernel invocation, with no external coordination.
 
+
 ✅ Key Features
 🌀 Works on irregular multi-stream input
 
@@ -49,6 +50,8 @@ Small uniform	10⁶	0.093	0.082	≈1.13x
 ✅ Benchmarks run on RTX 1070, CUDA 12.8
 
 ✅ Works natively with float32, float64, int, long
+
+
 
 
 💡 What does HUSM mean in practice?
