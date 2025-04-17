@@ -58,18 +58,6 @@ And still beat highly optimized libraries like CUB.
 HUSM is not an optimization.
 It’s a fundamentally different model of computation.
 
-📎 Example use case
-cpp:
-
-husm::multi_stream_sum<<<blocks, threads>>>(
-    device_data_ptr,
-    device_output_ptr,
-    stream_offsets_ptr,
-    stream_lengths_ptr,
-    num_streams
-);
-
-
 No atomic operations.
 No host-side loop.
 No stream-to-block mapping.
